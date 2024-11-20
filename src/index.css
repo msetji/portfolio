@@ -1,4 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
+  /* index.css */
+  background-color: #486966;
+  background-size: cover;
+  background-position: center;
+  filter: none; /* Ensure no filters */
+  opacity: 1;   /* Ensure full opacity */
+
+
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

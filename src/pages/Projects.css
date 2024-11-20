@@ -1,0 +1,97 @@
+/* Projects.css */
+.projects-container {
+    height: 100vh;
+    width: 92vw;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.projects-grid {
+    display: flex; /* Use Flexbox for row organization */
+    flex-wrap: wrap; /* Enable wrapping when items exceed the row width */
+    justify-content: flex-start; /* Align items to the top-left */
+    gap: 20px; /* Add space between the cards */
+    height: 40vh;
+}
+
+.project-card {
+    flex: 1 1 calc(25% - 20px); /* Flex item: takes up 25% width minus the gap */
+    max-width: calc(25% - 20px); /* Prevent cards from exceeding 25% width */
+    position: relative;
+    background-color: #90A19D;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+    .project-card {
+        flex: 1 1 calc(50% - 20px); /* Switch to 2 cards per row for smaller screens */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .project-card {
+        flex: 1 1 100%; /* Switch to 1 card per row for mobile screens */
+        max-width: 100%;
+    }
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-content {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.project-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-content {
+    opacity: 0;
+}
+
+.project-card:hover .project-hover {
+    opacity: 1;
+}
+
+button {
+    background-color: #6c8fa5;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5a7a8c;
+}
+
+/* .project-card, .projects-container, .projects-grid, .project-content, .project-hover {
+    border: 1px solid red;
+} */

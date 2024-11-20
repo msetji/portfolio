@@ -1,38 +1,32 @@
+/* src/App.css */
+
+/* global index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apply Montserrat as the default font for the entire app */
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Apply a background color to the entire app */
 .App {
-  text-align: center;
+  background-color: #f7f7f7;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+section {
+  min-height: 110vh; /* Each section takes up full viewport height */
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
 }

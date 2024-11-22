@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Projects.css';
 
 const projectData = [
@@ -55,6 +55,24 @@ const projectData = [
 const Projects = () => {
   const [activeProject, setActiveProject] = useState(null);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show');
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+
+    // Cleanup observer on component unmount
+    return () => observer.disconnect();
+  }, []);
+
   const openPopup = (project) => {
     setActiveProject(project);
   };
@@ -67,7 +85,7 @@ const Projects = () => {
     <div className="projects-container">
       <div className="projects-grid">
         {projectData.map((project, index) => (
-          <div className="project-card" key={index}>
+          <div className="project-card hidden" key={index}>
             <div className="project-content">
               <h2>{project.title}</h2>
               <p>{project.date}</p>

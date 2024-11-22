@@ -2,7 +2,7 @@
 
 /* Header styles */
 .header {
-    padding: 5px 30px;
+    padding: 0.3125rem 1.875rem; /* 5px 30px */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,20 +36,20 @@
 }
 
 .nav-item {
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem; /* 10px 20px */
 }
 
 .nav-right {
     display: flex;
-    font-size: 20px;
-    gap: 20px; /* Adjusted for better control */
+    font-size: 1.25rem; /* 20px */
+    gap: 1.25rem; /* 20px */
 }
 
 .nav-link {
     color: #fff;
     text-decoration: none;
     font-weight: 300;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.05em; /* Unchanged, as it’s already relative */
     text-transform: uppercase;
     transition: color 0.3s ease;
 }
@@ -79,9 +79,9 @@ html, body {
 
 @media (max-width: 768px) {
     .nav-right {
-        gap: 10px;
+        gap: 0.625rem; /* 10px */
     }
     .nav-item {
-        padding: 5px 10px;
+        padding: 0.3125rem 0.625rem; /* 5px 10px */
     }
 }

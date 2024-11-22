@@ -34,6 +34,27 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+
+.project-card.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: opacity 1s ease, transform 1s ease, filter 1s ease;
+}
+
+/* Staggered delays for showing */
+.project-card.show:nth-child(2) {
+    transition-delay: 100ms;
+}
+
+.project-card.show:nth-child(3) {
+    transition-delay: 200ms;
+}
+
+.project-card.show:nth-child(4) {
+    transition-delay: 300ms;
+}
+
 .project-card h2 {
     font-size: 1.2rem;
     margin-bottom: 10px;
@@ -125,4 +146,18 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: 0ms;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: opacity 1s ease, transform 1s ease, filter 1s ease;
 }

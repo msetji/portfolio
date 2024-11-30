@@ -9,8 +9,9 @@
   color: #fff;
   margin: 0;
   opacity: 0; /* Start hidden */
-  animation: fadeIn 1s ease-out forwards; /* Apply animation */
+  transform: translateY(20px); /* Start slightly off-position */
   font-weight: 500; /* Set font weight to medium */
+  transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth transition */
 }
 
 .home-subtitle {
@@ -18,26 +19,23 @@
   color: #fff;
   margin: 0;
   opacity: 0; /* Start hidden */
-  animation: fadeIn 1s ease-out 1s forwards; /* Fade in subtitle with a 1s delay */
+  transform: translateY(20px); /* Start slightly off-position */
+  transition: opacity 0.6s ease, transform 0.6s ease 0.2s; /* Delayed transition */
 }
 
-/* .home, .home-container {
-  border: 1px solid red;
-} */
-
-/* Color for "Michael Setji" */
 .highlight-text {
-  color: #053D38;
+  color: #053D38; /* Highlight color for "Michael Setji" */
 }
 
-.hidden {
+/* Visibility toggle for Intersection Observer */
+.home-hidden {
   opacity: 0;
-  filter: blur(5px);
-  transition: 0ms;
+  transform: translateY(20px); /* Start position */
+  transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth transition */
 }
 
-.show {
+.home-show {
   opacity: 1;
-  filter: blur(0);
-  transition: opacity 1s ease, filter 1s ease;
+  transform: translateY(0); /* Final position */
+  transition: opacity 0.6s ease, transform 0.6s ease; /* Smooth transition */
 }

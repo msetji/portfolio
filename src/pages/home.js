@@ -6,24 +6,30 @@ const Home = () => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('show');
+          entry.target.classList.add('home-show');
+          entry.target.classList.remove('home-hidden');
         } else {
-          entry.target.classList.remove('show'); // Reapply animation when it comes back into view
+          entry.target.classList.add('home-hidden');
+          entry.target.classList.remove('home-show');
         }
       });
     });
 
-    const hiddenElements = document.querySelectorAll('.hidden');
-    hiddenElements.forEach((el) => observer.observe(el));
+    const elements = document.querySelectorAll('.home-title, .home-subtitle');
+    elements.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
   }, []);
 
   return (
     <div className="home-container">
-      <h1 className="home-title hidden">Hello,</h1>
-      <h1 className="home-title hidden">I'm <span className="highlight-text">Michael Setji</span></h1>
-      <p className="home-subtitle hidden">I am an ECE/CS major at <span className="highlight-text">Duke University</span></p>
+      <h1 className="home-title home-hidden">Hello,</h1>
+      <h1 className="home-title home-hidden">
+        I'm <span className="highlight-text">Michael Setji</span>
+      </h1>
+      <p className="home-subtitle home-hidden">
+        I am an ECE/CS major at <span className="highlight-text">Duke University</span>
+      </p>
     </div>
   );
 };

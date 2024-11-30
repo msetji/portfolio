@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.card {
+    position: relative; /* Required for pseudo-element positioning */
+    background-color: #5D8679; /* Bubble background */
+    width: 60%;
+    height: 50%;
+    border-radius: 3rem;
+    display: flex; /* Add this to enable Flexbox behavior */
+    flex-direction: column; /* Stacks child elements vertically */
+    justify-content: flex-start; /* Aligns child elements at the top */
+    align-items: center; /* Centers child elements horizontally */
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    padding-top: 40px;
+}
+
+.card h1 {
+    font-size: 7.125rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    margin-top: 0; /* Optional: Removes extra margin if necessary */
+    color: #053D38;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #FFFFFF;
+}
+
+.card::after {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    bottom: -40px; /* Adjusts position below the card */
+    left: 95%; /* Moves it towards the left side of the card */
+    transform: rotate(-45deg); /* Rotates the tail -45 degrees */
+    border-style: solid;
+    border-width: 90px 40px 0 40px; /* Stretching height of the triangle */
+    border-color: #5D8679 transparent transparent transparent; /* Matches card background */
+}
+
+/* .card h1, .card {
+    border: red 1px solid;
+} */
+  
+.contact-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Spacing between icons */
+    margin-top: 20px; /* Adds space below the header */
+    padding-bottom: 20px;
+}
+
+.icon-link {
+    font-size: 2rem; /* Icon size */
+    color: #053D38; /* Icon color */
+    text-decoration: none; /* Removes underline on links */
+    transition: color 0.3s ease;
+}
+
+.icon-link:hover {
+    color: #FFFFFF; /* Highlight color on hover */
+}
+
+.card.hidden {
+    opacity: 0;
+    transform: scale(0.8); /* Start smaller */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  
+  .card.show {
+    opacity: 1;
+    transform: scale(1); /* Grow to normal size */
+  }
+  

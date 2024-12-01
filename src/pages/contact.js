@@ -77,7 +77,7 @@ const Experience = () => {
         <p>Feel free to reach out to me through any of the platforms above. I look forward to hearing from you!</p>
         <p>
           For business inquiries, please email me at{' '}
-          <a href="mailto:mps69@duke.edu">mps69@duke.edu</a> or call me at{' '}
+          <a href="mailto:mps69@duke.edu">mps69@duke.edu</a> or text me at{' '}
           <a href="tel:+1234567890">+1 (234) 567-890</a>.
         </p>
       </div>

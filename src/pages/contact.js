@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { FaPhoneAlt, FaEnvelope, FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 import './Contact.css';
 
-const Experience = () => {
+const Contact = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -17,7 +17,7 @@ const Experience = () => {
       { threshold: 0.2 } // Adjust threshold for when the animation triggers
     );
 
-    const card = document.querySelector('.card');
+    const card = document.querySelector('.contact-card');
     if (card) observer.observe(card);
 
     // Cleanup observer on component unmount
@@ -27,23 +27,23 @@ const Experience = () => {
   }, []);
 
   return (
-    <div className="container">
-      <div className="card hidden">
+    <div className="contact-container">
+      <div className="contact-card hidden">
         <h1>Let’s talk</h1>
         <div className="contact-icons">
           {/* Phone */}
-          <a href="tel:+1234567890" className="icon-link" aria-label="Phone">
+          <a href="tel:+19194910999" className="icon-link" aria-label="Phone">
             <FaPhoneAlt />
           </a>
 
           {/* Email */}
-          <a href="mailto:your-email@example.com" className="icon-link" aria-label="Email">
+          <a href="mailto:mps69@duke.edu" className="icon-link" aria-label="Email">
             <FaEnvelope />
           </a>
 
           {/* LinkedIn */}
           <a
-            href="https://www.linkedin.com/in/your-profile/"
+            href="https://www.linkedin.com/in/michaelsetji/"
             className="icon-link"
             aria-label="LinkedIn"
             target="_blank"
@@ -54,7 +54,7 @@ const Experience = () => {
 
           {/* Instagram */}
           <a
-            href="https://www.instagram.com/your-username/"
+            href="https://www.instagram.com/msetji/"
             className="icon-link"
             aria-label="Instagram"
             target="_blank"
@@ -65,7 +65,7 @@ const Experience = () => {
 
           {/* GitHub */}
           <a
-            href="https://github.com/your-username"
+            href="https://github.com/msetji"
             className="icon-link"
             aria-label="GitHub"
             target="_blank"
@@ -78,11 +78,11 @@ const Experience = () => {
         <p>
           For business inquiries, please email me at{' '}
           <a href="mailto:mps69@duke.edu">mps69@duke.edu</a> or text me at{' '}
-          <a href="tel:+1234567890">+1 (234) 567-890</a>.
+          <a href="tel:+19194910999">+1 (919) 491-0999</a>.
         </p>
       </div>
     </div>
   );
 };
 
-export default Experience;
+export default Contact;

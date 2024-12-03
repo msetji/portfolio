@@ -2,7 +2,7 @@ body {
     margin: 0;
 }
 
-.container {
+.contact-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +10,7 @@ body {
     width: 100vw;
 }
 
-.card {
+.contact-card {
     position: relative; /* Required for pseudo-element positioning */
     background-color: #5D8679; /* Bubble background */
     width: 60%;
@@ -25,7 +25,7 @@ body {
     padding-top: 40px;
 }
 
-.card h1 {
+.contact-card h1 {
     font-size: 7.125rem;
     font-weight: 800;
     margin-bottom: 10px;
@@ -33,12 +33,12 @@ body {
     color: #053D38;
 }
 
-.card p {
+.contact-card p {
     font-size: 1rem;
     color: #FFFFFF;
 }
 
-.card::after {
+.contact-card::after {
     content: ''; /* Required for pseudo-elements */
     position: absolute;
     bottom: -40px; /* Adjusts position below the card */
@@ -74,13 +74,13 @@ body {
     color: #FFFFFF; /* Highlight color on hover */
 }
 
-.card.hidden {
+.contact-card.hidden {
     opacity: 0;
     transform: scale(0.8); /* Start smaller */
     transition: opacity 0.6s ease, transform 0.6s ease;
   }
   
-  .card.show {
+  .contact-card.show {
     opacity: 1;
     transform: scale(1); /* Grow to normal size */
   }

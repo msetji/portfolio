@@ -25,6 +25,7 @@
 
 .highlight-text {
   color: #053D38; /* Highlight color for "Michael Setji" */
+  font-weight: 800; 
 }
 
 /* Visibility toggle for Intersection Observer */

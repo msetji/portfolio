@@ -1,0 +1,141 @@
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 5vh 10vw;
+    height: 100vh;
+    width: 100vw;
+}
+
+.experience-title {
+    font-size: 3rem;
+    color: #053D38;
+    margin: 0 0 10px 0;
+    font-weight: 800;
+}
+
+.experience-subtitle {
+    font-size: 1.5rem;
+    color: #A3CCAB;
+    margin: 0 0 20px 0;
+    font-weight: 400;
+}
+
+.experience-dates {
+    font-size: 1rem;
+    color: #A3CCAB;
+    margin: 0 0 20px 0;
+}
+
+.experience-description {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+}
+
+.experience-link {
+    font-size: 1rem;
+    color: #999;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.experience-link:hover {
+    text-decoration: underline;
+}
+
+/* Tasks Container */
+.tasks-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 30px 0;
+}
+
+/* Individual Task Cards */
+.task-card {
+    background-color: #1E1E1E;
+    color: #ffffff;
+    padding: 20px;
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+}
+
+.task-card:hover {
+    background-color: #2E2E2E;
+}
+
+.task-title {
+    font-size: 1.5rem;
+    color: #A3CCAB;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #2E2E2E;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 60%;
+    max-height: 95%;
+    text-align: center;
+}
+
+.modal-title {
+    font-size: 1.6rem;
+}
+
+.modal-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.modal-close {
+    background-color: #A3CCAB;
+    color: #2E2E2E;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    background-color: #8db79a;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .tasks-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .task-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
